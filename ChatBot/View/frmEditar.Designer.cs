@@ -138,6 +138,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditar";
             this.Text = "frmEditar";
+            this.Load += new System.EventHandler(this.frmEditar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
