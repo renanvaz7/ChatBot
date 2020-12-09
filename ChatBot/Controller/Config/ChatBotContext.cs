@@ -11,6 +11,9 @@ namespace ChatBot.Controller.Config
 {
     class ChatBotContext : DbContext
     {
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Login> Logins { get; set; }
+
         public ChatBotContext(){}
 
         public ChatBotContext(DbContextOptions<ChatBotContext> options) : base(options){}
@@ -24,13 +27,7 @@ namespace ChatBot.Controller.Config
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Cliente>(new UsuarioMap().Configure);
-            modelBuilder.Entity<Funcionario>(new FuncionarioMap().Configure);
             modelBuilder.Entity<Login>(new LoginMap().Configure);
-        }
-
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Funcionario> Funcionarios { get; set; }
-
-        public DbSet<Login> Logins { get; set; }
+        }        
     }
 }

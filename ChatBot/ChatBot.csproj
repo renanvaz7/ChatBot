@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -137,30 +140,58 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=15.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telegram.Bot.15.7.1\lib\net45\Telegram.Bot.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BotController.cs" />
     <Compile Include="Controller\Config\ChatBotContext.cs" />
     <Compile Include="Controller\Config\ContextFactory.cs" />
+    <Compile Include="Controller\Interface\IBot.cs" />
     <Compile Include="Controller\Interface\ILogin.cs" />
-    <Compile Include="Controller\Mapping\FuncionarioMap.cs" />
     <Compile Include="Controller\Mapping\LoginMap.cs" />
     <Compile Include="Controller\Mapping\UsuarioMap.cs" />
-    <Compile Include="Migrations\20201204010933_firstBd.cs" />
-    <Compile Include="Migrations\20201204010933_firstBd.designer.cs">
-      <DependentUpon>20201204010933_firstBd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ChatBotContextModelSnapshot.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmAdicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAdicionar.Designer.cs">
+      <DependentUpon>frmAdicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEditar.Designer.cs">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEnviarMensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEnviarMensagem.Designer.cs">
+      <DependentUpon>frmEnviarMensagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmExcluir.Designer.cs">
+      <DependentUpon>frmExcluir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmListar.Designer.cs">
+      <DependentUpon>frmListar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -170,6 +201,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmAdicionar.resx">
+      <DependentUpon>frmAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEditar.resx">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEnviarMensagem.resx">
+      <DependentUpon>frmEnviarMensagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmExcluir.resx">
+      <DependentUpon>frmExcluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListar.resx">
+      <DependentUpon>frmListar.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
